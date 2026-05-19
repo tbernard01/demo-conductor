@@ -1,4 +1,6 @@
 import numpy as np
+from preprocess import load_data, preprocess
+from sklearn.datasets import load_breast_cancer
 
 
 def add_features(X, feature_names=None):
@@ -11,9 +13,6 @@ def add_features(X, feature_names=None):
 
 
 if __name__ == "__main__":
-    from preprocess import load_data, preprocess
-    from sklearn.datasets import load_breast_cancer
-
     data = load_breast_cancer()
     df_raw = load_data()
     X, y = preprocess(df_raw)
